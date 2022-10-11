@@ -27,6 +27,9 @@ $paraTxt14: 0.875rem;
     box-sizing: border-box ;
 }
 
+html{
+    scroll-behavior: smooth;
+}
 body{
     min-width: 300px;
 }
@@ -247,6 +250,7 @@ header{
                 transition: .7s;
                 opacity: 0%;
                 color: #fff;
+                cursor: pointer;
                 
                 .overlayDetails{
                     position: relative;
@@ -275,7 +279,7 @@ header{
             }
             .overlay:hover{
                 opacity: 100%;
-                background-color: #00b3ffa8;
+                background-color: #00b3ffbe;
             }
                 
             img{
@@ -363,6 +367,7 @@ header{
                 width: 95%;
                 margin: 1rem auto;
                 padding: 1rem 2rem;
+                cursor: pointer;
 
                 i{
                     font-size: 3rem;
@@ -443,13 +448,10 @@ header{
 
         }
     }
+
     .mainContent{
         width: auto;
         margin: 0 0 0 350px;
-        
-    }
-
-    .mainContent{
         .workGallerySec{
             grid-template-columns: 1fr 1fr 1fr 1fr;
 
@@ -468,29 +470,41 @@ header{
                 grid-column: 3/5;
                 grid-row: 3/4;
             }
-        }
-
-        // SERVICE SECTION
-    .serviceSec{
-        padding: 1rem 3rem;
-        .serviceDetails{
-            max-width: 60rem;
-            margin: auto;
-        }
-        .serviceCard{
-            max-width: 60rem;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, 15rem);
-            justify-content: space-around;
-
-            .card{
-                max-width: 20rem;
-
+            .item{
+                .overlay{
+                    .overlayDetails{
+                        i{
+                            font-size: rem;
+                        }
+                        h1{
+                            font-size: 2rem;
+                        }
+                }
+            }
             }
         }
 
-    }
+        // SERVICE SECTION
+        .serviceSec{
+            padding: 1rem 3rem;
+            .serviceDetails{
+                max-width: 60rem;
+                margin: auto;
+            }
+            .serviceCard{
+                max-width: 60rem;
+                margin: auto;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, 15rem);
+                justify-content: space-around;
+
+                .card{
+                    max-width: 20rem;
+
+                }
+            }
+
+        }
     }
 
 }

@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   min-width: 300px;
 }
@@ -181,6 +185,7 @@ header .logo img {
   transition: 0.7s;
   opacity: 0%;
   color: #fff;
+  cursor: pointer;
 }
 .mainContent .workGallerySec .item .overlay .overlayDetails {
   position: relative;
@@ -207,7 +212,7 @@ header .logo img {
 }
 .mainContent .workGallerySec .item .overlay:hover {
   opacity: 100%;
-  background-color: rgba(0, 179, 255, 0.6588235294);
+  background-color: rgba(0, 179, 255, 0.7450980392);
 }
 .mainContent .workGallerySec .item img {
   height: 100%;
@@ -286,6 +291,7 @@ header .logo img {
   width: 95%;
   margin: 1rem auto;
   padding: 1rem 2rem;
+  cursor: pointer;
 }
 .mainContent .serviceSec .serviceCard .card i {
   font-size: 3rem;
@@ -355,6 +361,12 @@ header .logo img {
   .mainContent .workGallerySec .gridItem6 {
     grid-column: 3/5;
     grid-row: 3/4;
+  }
+  .mainContent .workGallerySec .item .overlay .overlayDetails i {
+    font-size: rem;
+  }
+  .mainContent .workGallerySec .item .overlay .overlayDetails h1 {
+    font-size: 2rem;
   }
   .mainContent .serviceSec {
     padding: 1rem 3rem;
