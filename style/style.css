@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -288,18 +289,6 @@ header .logo img {
   text-align: center;
   padding: 1rem 2rem 2rem;
 }
-.mainContent .serviceSec .serviceDetails .btn {
-  height: 2rem;
-  width: 10rem;
-  background-color: #03A9F5;
-  font-family: "Roboto", sans-serif;
-  font-size: 0.875rem;
-  font-weight: 900;
-  letter-spacing: 0.0625rem;
-  color: #fff;
-  padding: 0.625rem 2rem;
-  border-radius: 2rem;
-}
 .mainContent .serviceSec .serviceCard {
   height: auto;
   width: 100%;
@@ -332,11 +321,30 @@ header .logo img {
 }
 .mainContent .serviceSec .serviceCard .card:hover {
   border-radius: 1.5rem;
-  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.05);
+}
+.mainContent .btn {
+  height: 2rem;
+  background-color: #03A9F5;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 900;
+  letter-spacing: 0.0625rem;
+  color: #fff;
+  line-height: 2rem;
+  padding: 0.625rem 2rem;
+  border-radius: 2rem;
+  transition: 0.3s;
+}
+.mainContent .btn:hover {
+  background-color: #fff;
+  color: #03A9F5;
+  border: 1px solid #03A9F5;
 }
 .mainContent .skill {
   height: auto;
   width: 100%;
+  margin: auto;
   text-align: center;
   padding: 1rem;
 }
@@ -365,7 +373,7 @@ header .logo img {
   text-align: left;
 }
 .mainContent .skill .progressSec .progressItem p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   color: #737373;
@@ -388,8 +396,9 @@ header .logo img {
 .mainContent .skill .progressSec .progressBar span::after {
   content: "90";
   position: absolute;
-  height: 2rem;
-  width: 2rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  line-height: 1.5rem;
   top: 50%;
   right: 0;
   transform: translateY(-50%);
@@ -397,9 +406,8 @@ header .logo img {
   border-radius: 100%;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   text-align: center;
-  line-height: 2rem;
 }
 .mainContent .skill .progressSec .bar1 span {
   width: 89%;
@@ -424,6 +432,61 @@ header .logo img {
 }
 .mainContent .skill .progressSec .bar4 span::after {
   content: "82";
+}
+.mainContent .quoteSec {
+  height: auto;
+  width: 100%;
+  padding: 3rem;
+  margin: auto;
+  text-align: center;
+}
+.mainContent .quoteSec .quoteBox {
+  height: auto;
+  width: 80%;
+  padding: 2rem;
+  margin: 2rem auto;
+  text-align: center;
+  position: relative;
+}
+.mainContent .quoteSec .quoteBox p {
+  quotes: "“" "„";
+  position: relative;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #333333;
+}
+.mainContent .quoteSec .quoteBox p span {
+  color: #03A9F5;
+}
+.mainContent .quoteSec .quoteBox h2 {
+  font-size: 1.25rem;
+  color: #03A9F5;
+  font-family: "Montserrat", sans-serif;
+  padding: 1rem 0 0;
+  text-align: center;
+}
+.mainContent .quoteSec .quoteBox:hover {
+  border-radius: 1.5rem;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.05);
+}
+.mainContent .quoteSec .quoteBox::before {
+  content: "“";
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 5rem;
+  color: rgba(0, 0, 0, 0.15);
+  font-family: sans-serif;
+}
+.mainContent .quoteSec .quoteBox::after {
+  content: "„";
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 5rem;
+  color: rgba(0, 0, 0, 0.15);
+  font-family: sans-serif;
 }
 
 @media only screen and (min-width: 768px) {
@@ -495,5 +558,14 @@ header .logo img {
   .mainContent .serviceSec .serviceCard .card {
     min-width: 95%;
     max-width: 20rem;
+  }
+  .mainContent .skill {
+    max-width: 60rem;
+  }
+  .mainContent .quoteSec {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 25rem);
+    justify-content: space-around;
+    max-width: 60rem;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -275,11 +275,10 @@ header{
                         font-weight: 400;
                     }
                 }
-                
-            }
-            .overlay:hover{
-                opacity: 100%;
-                background-color: #00b3ffbe;
+                &:hover{
+                    opacity: 100%;
+                    background-color: #00b3ffbe;
+                }
             }
                 
             img{
@@ -367,18 +366,7 @@ header{
                 text-align: center;
                 padding: 1rem 2rem 2rem;
             }
-            .btn{
-               height: 2rem; 
-               width: 10rem;
-               background-color: #03A9F5;
-               font-family: $fontRoboto;
-               font-size: .875rem;
-               font-weight: 900;
-               letter-spacing: .0625rem;
-               color: #fff;
-               padding: .625rem 2rem;
-               border-radius: 2rem;
-            }
+            
         }
 
         .serviceCard{
@@ -411,20 +399,41 @@ header{
                     padding: 0 0 1rem;
                     font-size: 1rem;
                 }
+                &:hover{
+                    border-radius: 1.5rem;
+                    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.05);
+    
+                }
             }
-            .card:hover{
-                border-radius: 1.5rem;
-                box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
-
-            }
+            
         }
     }
+
+    .btn{
+        height: 2rem; 
+        background-color: #03A9F5;
+        font-family: $fontRoboto;
+        font-size: .875rem;
+        font-weight: 900;
+        letter-spacing: .0625rem;
+        color: #fff;
+        line-height: 2rem;
+        padding: .625rem 2rem;
+        border-radius: 2rem;
+        transition: .3s;
+        &:hover{
+            background-color: #fff;
+            color: #03A9F5;
+            border: 1px solid #03A9F5;
+        }
+     }
 
     // SKILL SECTION STYLE 
 
     .skill{
         height: auto;
         width: 100%;
+        margin: auto;
         text-align: center;
         padding: 1rem;
         .details{
@@ -451,7 +460,7 @@ header{
                 padding: 1rem;
                 text-align: left;
                 p{
-                    font-size: 1.5rem;
+                    font-size: 1rem;
                     font-family: $fontMontserrat;
                     font-weight: 600;
                     color: #737373;
@@ -474,8 +483,9 @@ header{
                 span::after{
                     content: "90";
                     position: absolute;
-                    height: 2rem;
-                    width: 2rem;
+                    height: 1.5rem;
+                    width: 1.5rem;
+                    line-height: 1.5rem;
                     top: 50%;
                     right: 0;
                     transform: translateY(-50%);
@@ -483,11 +493,8 @@ header{
                     border-radius: 100%;
                     font-family: $fontMontserrat;
                     font-weight: 600;
-                    font-size: .875rem;
+                    font-size: .8rem;
                     text-align: center;
-                    line-height: 2rem;
-                    
-
                 }
 
                 
@@ -528,6 +535,65 @@ header{
         }
 
 
+    }
+
+    // QUOTES SECTION STYLE 
+
+    .quoteSec{
+        height: auto;
+        width: 100%;
+        padding: 3rem;
+        margin: auto;
+        text-align: center;
+        .quoteBox{
+            height: auto;
+            width: 80%;
+            padding: 2rem;
+            margin: 2rem auto;
+            text-align: center;
+            position: relative;
+            p{
+                quotes: '\201C' '\201E';
+                position: relative;
+                font-size: 1rem;
+                font-family: $fontMontserrat;
+                font-weight: 700;
+                // padding: 2rem;
+                color: #333333;
+                span{
+                    color: #03A9F5;
+                }
+            }
+            h2{
+                font-size: 1.25rem;
+                color: #03A9F5;
+                font-family: $fontMontserrat;
+                padding: 1rem 0 0;
+                text-align: center;
+            }
+            &:hover{
+                border-radius: 1.5rem;
+                box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.05);
+            }
+            &::before{
+                content: "\201C";
+                position: absolute;
+                top: 1rem;
+                left: 1rem;
+                font-size: 5rem;
+                color: rgba(0, 0, 0, 0.15);
+                font-family: sans-serif;
+            }
+            &::after{
+                content: "\201E";
+                position: absolute;
+                bottom: 1rem;
+                right: 1rem;
+                font-size: 5rem;
+                color: rgba(0, 0, 0, 0.15);
+                font-family: sans-serif;
+            }
+        }
     }
 }
 
@@ -639,7 +705,22 @@ header{
             }
 
         }
+
+        // SKILL SECTION 
+        .skill{
+            max-width: 60rem;
+        }
+
+        // QUOTE SECTION 
+        .quoteSec{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 25rem);
+            justify-content: space-around;
+            // padding: 0;
+            max-width: 60rem;
+        }
     }
+
 
 }
 
