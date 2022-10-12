@@ -300,6 +300,29 @@ header{
 
     // SERVICE SECTION
 
+
+    .sectionSubHeading{
+        font-size: 1rem;
+        color: #03A9F5;
+        font-family: $fontRoboto;
+        padding: 1rem;
+        font-weight: 600;
+        letter-spacing: .0625rem;
+        position: relative;
+        
+    }
+    .sectionSubHeading::before{
+        content: "";
+        height: auto;
+        width: 2rem;
+        position: absolute;
+        border-top: 3px solid #03A9F5;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
     .serviceSec{
         height: auto;
         width: 100%;
@@ -310,7 +333,7 @@ header{
             height: auto;
             width: 100%;
             margin: 2rem 0;
-            h4{
+            .sectionSubHeading{
                 font-size: 1rem;
                 color: #03A9F5;
                 font-family: $fontRoboto;
@@ -320,7 +343,7 @@ header{
                 position: relative;
                 
             }
-            h4::before{
+            .sectionSubHeading::before{
                 content: "";
                 height: auto;
                 width: 2rem;
@@ -364,7 +387,7 @@ header{
             padding: 2rem 0;
             .card{
                 height: auto;
-                width: 95%;
+                width: 80%;
                 margin: 1rem auto;
                 padding: 1rem 2rem;
                 cursor: pointer;
@@ -395,6 +418,14 @@ header{
 
             }
         }
+    }
+
+    // SKILL SECTION STYLE 
+
+    .skill{
+        height: auto;
+        width: 100%;
+        text-align: center;
     }
 }
 
@@ -499,6 +530,7 @@ header{
                 justify-content: space-around;
 
                 .card{
+                    min-width: 95%;
                     max-width: 20rem;
 
                 }
