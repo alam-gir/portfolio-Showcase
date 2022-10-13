@@ -58,7 +58,9 @@ p{
     letter-spacing: .5px;
     font-weight: 200;
 }
-
+li{
+    list-style: none;
+}
 a{
     text-decoration: none;
     color: #333333;
@@ -600,7 +602,7 @@ header{
         }
     }
 
-    // PRJECT SETCION STYLE 
+    // PROJECT SETCION STYLE 
 
     .projectSec{
         height: auto;
@@ -634,6 +636,74 @@ header{
 
 
     }
+
+    // PRICE SECTION STYLE 
+
+    .priceSec{
+        height: auto;
+        width: auto;
+        // padding: 3rem;
+        text-align: center;
+        .priceSecHeading{
+            height: auto;
+            width: 100%;
+            padding: 3rem;
+        }
+        h1{
+            font-size: 2rem;
+            padding: 2rem;
+        }
+        .priceCard{
+            height: auto;
+            width: 25rem;
+            margin: 3rem auto;
+            padding: 4rem 2rem;
+            border-radius: 1rem;
+            transition: .3s;
+            &:hover{
+                box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+            }
+            .priceCategory{
+                font-size: 1.5rem;
+                padding: 0;
+                margin: 0 0 .5rem;
+            }
+            p{
+                margin: 0 0 1.5rem;
+            }
+            .price{
+                font-size: 3.75rem;
+                margin-bottom: 1.5rem; quotes: "$" "$";
+                position: relative;
+                display: inline-block;
+                margin-bottom: 1.5rem;
+                &::before{
+                    content: "$";
+                    font-size: 1.5rem;
+                    position: absolute;
+                    top: 15%;
+                    left: -15%;
+                }
+                &::after{
+                    content: "/Month";
+                    font-size: 1rem;
+                }
+            }
+            .featureList{
+                height: auto;
+                width: auto;
+                margin-bottom: 1.5rem;
+                li{
+                    font-size: 1rem;
+                    color: #737373;
+                    margin-bottom: .625rem;
+                    font-family: $fontMontserrat;
+
+                }
+            }
+        }
+    }
+
 }
 
 
@@ -755,7 +825,7 @@ header{
             display: grid;
             grid-template-columns: repeat(auto-fill, 25rem);
             justify-content: space-around;
-            // padding: 0;
+            padding: 0;
             max-width: 60rem;
         }
 
@@ -795,6 +865,21 @@ header{
                     bottom: 10%;
                     transform: translateX(-50%);
                 }
+            }
+        }
+
+        // PRICE SECTION 
+        .priceSec{
+            height: auto;
+            max-width: 60rem;
+            margin: auto;
+            .priceCardBox{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 20rem);
+            justify-content: space-around;
+            .priceCard{
+                max-width: 20rem;
+            }
             }
         }
     }
