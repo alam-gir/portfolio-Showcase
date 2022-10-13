@@ -599,6 +599,41 @@ header{
             }
         }
     }
+
+    // PRJECT SETCION STYLE 
+
+    .projectSec{
+        height: auto;
+        width: 100%;
+        text-align: center;
+        padding: 2REM 0;
+        .projectSlide{
+            height: auto;
+            width: 100%;
+            .projectPhoto{
+                height: 20rem;
+                width: 100%;
+                img{
+                    height: 20rem;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .projectDetails{
+                height: auto;
+                width: 100%;
+                padding: 3rem;
+                h1{
+                    font-size: 1.5rem;
+                    color: #333333;
+                    padding: 2rem;
+
+                }
+            }
+        }
+
+
+    }
 }
 
 
@@ -722,6 +757,45 @@ header{
             justify-content: space-around;
             // padding: 0;
             max-width: 60rem;
+        }
+
+        // PROJECT SECTION  
+        .projectSec{
+            .projectSlide{
+                height: 40rem;
+                position: relative;
+                .projectPhoto{
+                    height: 40rem;
+                    position: absolute;
+                    img{
+                        height: 100%;
+                    }
+                }
+                
+                .projectDetails{
+                    max-width: 60rem;
+                    position: absolute;
+                    background-color: rgba(0, 0, 0, 0.3);
+                    border-radius: 2rem;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                   h1{
+                    color: #fff;
+                    }
+                    p{
+                        color:#ffffffb0;
+                    }
+
+                }
+                .btn{
+                    height: 2rem;
+                    line-height: 1rem;
+                    position: absolute;
+                    bottom: 10%;
+                    transform: translateX(-50%);
+                }
+            }
         }
     }
 
