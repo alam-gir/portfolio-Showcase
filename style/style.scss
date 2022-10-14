@@ -843,6 +843,7 @@ header{
                 font-family: $fontMontserrat;
             }
         }
+        
     }
 
 }
@@ -1031,7 +1032,18 @@ header{
                 max-width: 25rem;
             }
         }
+
+        // CONTACT SECTION 
+        .contactSec{
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            justify-content: center;
+            .googleMap{
+                margin-top: 16%;
+            }
+        }
     }
+
 
 
 }

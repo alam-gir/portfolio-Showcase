@@ -851,4 +851,12 @@ header .logo img {
   .mainContent .clientSec .clientSlider {
     max-width: 25rem;
   }
+  .mainContent .contactSec {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-content: center;
+  }
+  .mainContent .contactSec .googleMap {
+    margin-top: 16%;
+  }
 }/*# sourceMappingURL=style.css.map */
