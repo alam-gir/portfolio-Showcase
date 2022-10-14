@@ -823,25 +823,37 @@ header{
             width: 100%;
             background-color: #eeeeee80;
             position: relative;
-            h1{
-                font-size: 1rem;
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+            &::before{
+                content: "";
+                height: 100%;
+                width: 100%;
+                display: block;
+                background-color: rgba(0, 0, 0, 0.3);
                 position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%,-50%) rotate(45deg);
             }
         }
         .addressBox{
             padding: 2rem;
-            h1{
-                margin: 1rem auto;
-            }
-            h4{
-                margin: .625rem auto;
-                font-size: .875rem;
-                font-weight: 600;
-                color: #333333;
-                font-family: $fontMontserrat;
+            .addressArea{
+                h1{
+                    margin: 1rem auto;
+                }
+                h4{
+                    margin: .625rem auto;
+                    font-size: .875rem;
+                    font-weight: 600;
+                    color: #333333;
+                    font-family: $fontMontserrat;
+                }
+                .addressCountry, .mobile, .email{
+                    margin-bottom: 1rem;
+                }
+                
             }
         }
         
@@ -1043,10 +1055,6 @@ header{
             .item2{
                 grid-column: 1/2;
                 grid-row: 1/2;
-            }
-
-            .googleMap{
-                margin-top: 16%;
             }
         }
     }
