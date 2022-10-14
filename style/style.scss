@@ -35,6 +35,8 @@ body{
 }
 
 
+// GLOBAL STYLE  
+
 h1{
     font-family: $fontMontserrat;
     font-size: 1.875rem;
@@ -65,6 +67,55 @@ a{
     text-decoration: none;
     color: #333333;
 }
+
+
+.socialNavigation{
+        padding: 1rem 0.5rem;
+        li{
+            display: inline-block;
+            margin-right: .5rem;
+            
+            a{
+                
+                i{
+                    color: #333333;
+                    transition: .3s;
+                    padding: .5rem;
+                    border-radius: 100%;
+                    
+                    
+                }
+                :hover{
+                    color: white;
+                    background: #03A9F5;
+                    
+                }
+            }
+        }
+    }
+
+
+
+.btn{
+    height: 2rem; 
+    background-color: #03A9F5;
+    font-family: $fontRoboto;
+    font-size: .875rem;
+    font-weight: 900;
+    letter-spacing: .0625rem;
+    color: #fff;
+    line-height: 2rem;
+    padding: .625rem 2rem;
+    border-radius: 2rem;
+    transition: .3s;
+    &:hover{
+        background-color: #fff;
+        color: #03A9F5;
+        border: 1px solid #03A9F5;
+    }
+ }
+
+
 
 // MOBILE FIRST DESIGN 
 
@@ -185,30 +236,7 @@ header{
     li{
         list-style: none;
     }
-    .socialNavigation{
-        padding: 1rem 0.5rem;
-        li{
-            display: inline-block;
-            margin-right: .5rem;
-            
-            a{
-                
-                i{
-                    color: #333333;
-                    transition: .3s;
-                    padding: .5rem;
-                    border-radius: 100%;
-                    
-                    
-                }
-                :hover{
-                    color: white;
-                    background: #03A9F5;
-                    
-                }
-            }
-        }
-    }
+    
     footer{
         padding: 0rem 0.5rem;
         h3{
@@ -411,24 +439,6 @@ header{
         }
     }
 
-    .btn{
-        height: 2rem; 
-        background-color: #03A9F5;
-        font-family: $fontRoboto;
-        font-size: .875rem;
-        font-weight: 900;
-        letter-spacing: .0625rem;
-        color: #fff;
-        line-height: 2rem;
-        padding: .625rem 2rem;
-        border-radius: 2rem;
-        transition: .3s;
-        &:hover{
-            background-color: #fff;
-            color: #03A9F5;
-            border: 1px solid #03A9F5;
-        }
-     }
 
     // SKILL SECTION STYLE 
 
@@ -642,7 +652,6 @@ header{
     .priceSec{
         height: auto;
         width: auto;
-        // padding: 3rem;
         text-align: center;
         .priceSecHeading{
             height: auto;
@@ -655,8 +664,8 @@ header{
         }
         .priceCard{
             height: auto;
-            width: 25rem;
-            margin: 3rem auto;
+            width: 80%;
+            margin: auto;
             padding: 4rem 2rem;
             border-radius: 1rem;
             transition: .3s;
@@ -700,6 +709,138 @@ header{
                     font-family: $fontMontserrat;
 
                 }
+            }
+        }
+    }
+
+    // CLIENT SECTION STYLE 
+    .clientSec{
+        height: 50rem;
+        width: 100%;
+        margin: 2rem 0;
+        position: relative;
+        text-align: center;
+        .clientSliderBanner{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            position: sticky;
+            bottom: 0;
+            z-index: -10;
+        }
+
+        &::before{
+            content: "";
+            background-color: #03A9F5;
+            height: 25rem;
+            width: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .clientSlider{
+            height: 90%;
+            width: 80%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 1rem;
+            &:hover{
+                box-shadow: 1px 1px 10px rgba(219, 0, 0, 0.1)
+            }
+            .clientReview{
+                height: 12rem;
+                width: 80%;
+                margin: auto;
+                position: absolute;
+                top: 5rem;
+                left: 50%;
+                transform: translateX(-50%);
+
+                &::before{
+                    content: open-quote;
+                    font-size: 6rem;
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                    color: #333333;
+                    top: -1rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    position: absolute;
+                }
+            }
+            .clientImg{
+                height: 8rem;
+                width: auto;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                img{
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 100%;
+                    object-fit: cover;
+                }
+            }
+            .clientDetails{
+                height: auto;
+                width: 100%;
+                position: absolute;
+                bottom: 30%;
+                .name{
+                    font-size: 1.25rem;
+                    font-family: $fontMontserrat;
+                    color: #03A9F5;
+                    margin-bottom: .5rem;
+                }
+                .profession{
+                    font-size: 1rem;
+                    font-family: $fontMontserrat;
+                    color: #2B2B2B;
+                    font-weight: 500;
+                    margin-bottom: .5rem;
+                }
+            }
+            .clientSocialNavigation{
+                position: absolute;
+                bottom: 25%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+    // CONTACT SECTION STYLE 
+    .contactSec{
+        height: auto;
+        width:  100%;
+        text-align: center;
+        padding: 1rem 0;
+        .googleMap{
+            height: 25rem;
+            width: 100%;
+            background-color: #eeeeee80;
+            position: relative;
+            h1{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%) rotate(45deg);
+            }
+        }
+        .addressBox{
+            padding: 2rem;
+            h1{
+                margin: 1rem auto;
+            }
+            h4{
+                margin: .625rem auto;
+                font-size: .875rem;
+                font-weight: 600;
+                color: #333333;
+                font-family: $fontMontserrat;
             }
         }
     }
@@ -824,7 +965,7 @@ header{
         .quoteSec{
             display: grid;
             grid-template-columns: repeat(auto-fill, 25rem);
-            justify-content: space-around;
+            justify-content: space-evenly;
             padding: 0;
             max-width: 60rem;
         }
@@ -876,10 +1017,18 @@ header{
             .priceCardBox{
             display: grid;
             grid-template-columns: repeat(auto-fill, 20rem);
-            justify-content: space-around;
-            .priceCard{
-                max-width: 20rem;
+            justify-content: space-evenly;
+                .priceCard{
+                    width: 20rem;
+                    max-width: 20rem;
+                }
             }
+        }
+
+        // CLIENT SECTION 
+        .clientSec{
+            .clientSlider{
+                max-width: 25rem;
             }
         }
     }
