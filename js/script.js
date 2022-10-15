@@ -1,1 +1,0 @@
-div = document.querySelectorAll(div)

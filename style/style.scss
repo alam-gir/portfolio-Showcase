@@ -116,6 +116,28 @@ a{
  }
 
 
+ .sectionSubHeading{
+    font-size: 1rem;
+    color: #03A9F5;
+    font-family: $fontRoboto;
+    padding: 1rem;
+    font-weight: 600;
+    letter-spacing: .0625rem;
+    position: relative;
+    
+}
+.sectionSubHeading::before{
+    content: "";
+    height: auto;
+    width: 2rem;
+    position: absolute;
+    border-top: 3px solid #03A9F5;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
 
 // MOBILE FIRST DESIGN 
 
@@ -209,6 +231,7 @@ header{
     left: -100%;
     padding: 6rem 3rem;
     background-color: #fff;
+    transition: .3s ease;
 
     .navigation{
         ul{
@@ -329,33 +352,10 @@ header{
 
     // SERVICE SECTION
 
-
-    .sectionSubHeading{
-        font-size: 1rem;
-        color: #03A9F5;
-        font-family: $fontRoboto;
-        padding: 1rem;
-        font-weight: 600;
-        letter-spacing: .0625rem;
-        position: relative;
-        
-    }
-    .sectionSubHeading::before{
-        content: "";
-        height: auto;
-        width: 2rem;
-        position: absolute;
-        border-top: 3px solid #03A9F5;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-
     .serviceSec{
         height: auto;
         width: 100%;
-        padding: 1rem;
+        padding: 10vh 1rem 1rem;
         text-align: center;
 
         .serviceDetails{
@@ -555,7 +555,7 @@ header{
     .quoteSec{
         height: auto;
         width: 100%;
-        padding: 3rem;
+        padding: 3rem 3rem 0;
         margin: auto;
         text-align: center;
         .quoteBox{
@@ -618,7 +618,7 @@ header{
         height: auto;
         width: 100%;
         text-align: center;
-        padding: 2REM 0;
+        padding: 10vh 0 0;
         .projectSlide{
             height: auto;
             width: 100%;
@@ -653,6 +653,7 @@ header{
         height: auto;
         width: auto;
         text-align: center;
+        padding: 10vh 0 0;
         .priceSecHeading{
             height: auto;
             width: 100%;
@@ -720,6 +721,7 @@ header{
         margin: 2rem 0;
         position: relative;
         text-align: center;
+        padding: 10vh 0 0;
         .clientSliderBanner{
             height: 100%;
             width: 100%;
