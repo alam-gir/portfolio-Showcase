@@ -33,17 +33,22 @@ const menuList = document.querySelectorAll('.menuItems li');
 
 window.addEventListener("scroll", ()=> {
     let currentSection = "";
+    
     sections.forEach(section => {
-        if(scrollY > section.offsetTop){
+        if(scrollY > section.offsetTop * .95){
             currentSection = section.getAttribute('id');
         }
     });
-
+    
     menuList.forEach( li => {
-        li.classList.remove('activeNav');
         if(li.classList.contains(currentSection)){
-            li.classList.remove('activeNav');
-        } else{
+            li.classList.add('activeNav');
+           
+        }
+        else if(currentSection == ""){
+            li.firstChild.classList.add('activeNav')
+        }
+        else{
             li.classList.remove('activeNav');
         };
     });
