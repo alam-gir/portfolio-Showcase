@@ -107,6 +107,10 @@ a {
   transform: translateX(-50%);
 }
 
+.activeNav a {
+  color: #03A9F5;
+}
+
 header {
   height: 10vh;
   width: 100%;
@@ -186,9 +190,6 @@ header .logo img {
   font-size: 2rem;
   color: #D9D9D9;
   padding: 0 0.5rem;
-}
-.menuContent .navigation ul li .active {
-  color: #03A9F5;
 }
 .menuContent li {
   list-style: none;
@@ -348,7 +349,7 @@ header .logo img {
 }
 .mainContent .serviceSec .serviceCard .card:hover {
   border-radius: 1.5rem;
-  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
 }
 .mainContent .skill {
   height: auto;
@@ -417,7 +418,7 @@ header .logo img {
   font-weight: 600;
   font-size: 0.8rem;
   text-align: center;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
 }
 .mainContent .skill .progressSec .bar1 span {
   width: 89%;
@@ -481,7 +482,7 @@ header .logo img {
 }
 .mainContent .quoteSec .quoteBox:hover {
   border-radius: 1.5rem;
-  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
 }
 .mainContent .quoteSec .quoteBox::before {
   content: "“";

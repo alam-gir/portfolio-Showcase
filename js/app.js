@@ -1,5 +1,7 @@
 const menuBtn = document.querySelector(".menuIcon");
 const menuContent = document.querySelector(".menuContent");
+var menuBar = document.querySelector(".menuItems");
+
 
 function openClassAdd(){
     if(menuBtn.classList.contains('open')){
@@ -13,12 +15,36 @@ function openClassAdd(){
 }
 menuBtn.addEventListener("click", openClassAdd);
 
-var menuList = document.querySelector(".menuItems");
-function menuListHider(){
+
+
+function menuBarHider(){
     if(window.innerWidth < 768){
         menuBtn.classList.remove('open');
         menuContent.style.left = '-100%';
     }
 
 }
-menuList.addEventListener("click", menuListHider);
+menuBar.addEventListener("click", menuBarHider);
+
+
+
+const sections = document.querySelectorAll('section');
+const menuList = document.querySelectorAll('.menuItems li');
+
+window.addEventListener("scroll", ()=> {
+    let currentSection = "";
+    sections.forEach(section => {
+        if(scrollY > section.offsetTop){
+            currentSection = section.getAttribute('id');
+        }
+    });
+
+    menuList.forEach( li => {
+        li.classList.remove('activeNav');
+        if(li.classList.contains(currentSection)){
+            li.classList.remove('activeNav');
+        } else{
+            li.classList.remove('activeNav');
+        };
+    });
+})

@@ -138,6 +138,10 @@ a{
 }
 
 
+.activeNav a{
+    color: #03A9F5;
+}
+
 
 // MOBILE FIRST DESIGN 
 
@@ -246,12 +250,6 @@ header{
                     color: #D9D9D9;
                     padding: 0 .5rem;
                 }
-                .active{
-                    
-                   color: #03A9F5;
-                   
-                }
-
             }
         }
     }
@@ -431,7 +429,7 @@ header{
                 }
                 &:hover{
                     border-radius: 1.5rem;
-                    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.05);
+                    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
     
                 }
             }
@@ -507,7 +505,7 @@ header{
                     font-weight: 600;
                     font-size: .8rem;
                     text-align: center;
-                    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+                    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
                 }
 
                 
@@ -589,7 +587,7 @@ header{
             }
             &:hover{
                 border-radius: 1.5rem;
-                box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.05);
+                box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
             }
             &::before{
                 content: "\201C";
